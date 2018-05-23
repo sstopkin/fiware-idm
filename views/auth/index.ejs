@@ -1,4 +1,4 @@
-<h1>Log in</h1>
+<h1>Авторизация</h1>
 
 <form method='POST' action='/process'>
   <input type="hidden" name="_csrf" value="<%=csrfToken %>">
@@ -8,14 +8,14 @@
   </div>
 
   <div class="field">
-    <label for="password">Password:</label><br />
+    <label for="password">Пароль:</label><br />
     <input type="password" id="password" name="password" size="30" />
-    
+
   </div>
 
   <div class="actions">
     <input name="signIn" type="submit" value="Sign In" />
-    <p><a href="/sign_up"><button type="button">Sign Up</button></a></a></p>
+    <p><a href="/sign_up"><button type="button">Регистрация</button></a></a></p>
   </div>
 
 </form>

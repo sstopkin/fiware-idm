@@ -1,8 +1,8 @@
-<% 
+<%
   var help_about_items = '_help_about_items';
 
   if (site.theme !== 'default') {
-    if(fs.existsSync('themes/' + site.theme + '/templates/_help_about_items.ejs')) 
+    if(fs.existsSync('themes/' + site.theme + '/templates/_help_about_items.ejs'))
       help_about_items = '../themes/' + site.theme + '/templates/_help_about_items';
   }
 %>
@@ -16,5 +16,3 @@
          <%- include(help_about_items)  %>
     </div>
 </div>
-
-

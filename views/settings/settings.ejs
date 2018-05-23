@@ -1,14 +1,14 @@
 <div id="content_body">
     <div class="page-header">
         <h2>
-            Settings
+            Настройки
         </h2>
     </div>
     <div class="panel-group settings" id="accordion">
         <div class="panel panel-default ">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapse-0" class="panel-heading collapsed">
                 <h4 class="panel-title panel-close">
-                    Change your password
+                    Изменить пароль
                 </h4>
             </a>
             <div id="collapse-0" class="panel-collapse collapse change_password" style="height: 0px;">
@@ -18,19 +18,19 @@
                         <fieldset>
                             <legend></legend>
                             <div class="form-group required has-feedback">
-                                <label class="control-label  required" for="id_current_password">Current password</label>
+                                <label class="control-label  required" for="id_current_password">Текущий пароль</label>
                                 <div class=" ">
                                     <input class="form-control" id="id_current_password" name="current_password" type="password"><span class="form-control-feedback fa fa-eye"></span>
                                 </div>
                             </div>
                             <div class="form-group required has-feedback">
-                                <label class="control-label  required" for="id_new_password">New password</label>
+                                <label class="control-label  required" for="id_new_password">Новый пароль</label>
                                 <div class=" ">
                                     <input class="form-control" id="id_new_password" name="new_password" type="password"><span class="form-control-feedback fa fa-eye"></span>
                                 </div>
                             </div>
                             <div class="form-group required has-feedback">
-                                <label class="control-label  required" for="id_confirm_password">Confirm new password</label>
+                                <label class="control-label  required" for="id_confirm_password">Новый пароль (еще раз)</label>
                                 <div class=" ">
                                     <input class="form-control" id="id_confirm_password" name="confirm_password" type="password"><span class="form-control-feedback fa fa-eye"></span>
                                 </div>
@@ -44,7 +44,7 @@
         <div class="panel panel-default ">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1" class="panel-heading collapsed">
                 <h4 class="panel-title panel-close">
-                    Change your email
+                    Изменить адрес email
                 </h4>
             </a>
             <div id="collapse-1" class="panel-collapse collapse" style="height: 0px;">
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                             <div class="form-group required has-feedback">
-                                <label class="control-label  required" for="id_password">Current password</label>
+                                <label class="control-label  required" for="id_password">Текущий пароль</label>
                                 <div class=" ">
                                     <input class="form-control" id="id_password" name="password" type="password"><span class="form-control-feedback fa fa-eye"></span>
                                 </div>
@@ -74,7 +74,7 @@
         <div class="panel panel-default ">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="panel-heading collapsed">
                 <h4 class="panel-title panel-close">
-                    Manage two-factor authentication
+                    Управление двухфакторной аутентификацией
                 </h4>
             </a>
             <div id="collapse-2" class="panel-collapse collapse" style="height: 0px;">
@@ -147,7 +147,7 @@
                                 },
                                 error: error });
                         });
-                            
+
                         $(document).on("click", "#two_factor_enable_modal, [data-dismiss='modal']", function(e) {
                             location.reload(true);
                         });
@@ -179,7 +179,7 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        
+
         $('#id_new_password').bind("keyup input",function(e) {
             var input = $('#id_new_password')
             var value_input = $('#id_new_password').val()
@@ -194,9 +194,9 @@
         $(".form-control-feedback").css('cursor', 'default');
 
         $(".form-control-feedback").click(function() {
-            
+
             if ($(this).hasClass('fa-eye')) {
-                $(this).siblings().attr('type', 'text')    
+                $(this).siblings().attr('type', 'text')
             } else {
                 $(this).siblings().attr('type', 'password')
             }

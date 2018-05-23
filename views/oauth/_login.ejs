@@ -1,6 +1,6 @@
 <div class="login">
   <div class="modal-header">
-    <h3>Log In</h3>
+    <h3>Авторизация</h3>
   </div>
   <form id="" ng-controller="DummyCtrl" name="" autocomplete="on" class="" action="/oauth2/authorize?response_type=<%= application.response_type %>&client_id=<%= application.id %>&state=<%= application.state %>&redirect_uri=<%= application.redirect_uri %>" method="POST" enctype="">
     <div class="modal-body clearfix">
@@ -15,32 +15,32 @@
       <% } %>
       <% if (nameErrors.indexOf("user_not_found") != -1 || nameErrors.indexOf("invalid") != -1) { %>
         <div class="alert alert-message alert-danger">
-          <ul class="errorlist"><li>Invalid user name or password.</li></ul>
+          <ul class="errorlist"><li>Неправильное имя пользователя или пароль.</li></ul>
         </div>
       <% } %>
       <div class="form-group ">
         <label class="control-label" for="id_username">Email</label>
         <div class=" ">
-          <input autofocus="autofocus" class="form-control" id="id_email" name="email" type="text" />  
+          <input autofocus="autofocus" class="form-control" id="id_email" name="email" type="text" />
         </div>
       </div>
       <% if (nameErrors.indexOf("email") != -1) { %>
-        <span class="help-block alert alert-danger ">Este campo es obligatorio.</span>
+        <span class="help-block alert alert-danger ">Это поле является обязательным.</span>
       <% } %>
       <div class="form-group ">
-        <label class="control-label" for="id_password">Password</label>
+        <label class="control-label" for="id_password">Пароль</label>
         <div class=" ">
-          <input class="form-control" id="id_password" name="password" type="password" />   
-        </div> 
+          <input class="form-control" id="id_password" name="password" type="password" />
+        </div>
       </div>
       <% if (nameErrors.indexOf("password") != -1) { %>
-        <span class="help-block alert alert-danger ">Este campo es obligatorio.</span>
+        <span class="help-block alert alert-danger ">Это поле является обязательным.</span>
       <% } %>
     </div>
     <div class="modal-footer">
       <div class="checkbox">
         <label>
-          <input type="checkbox"> 
+          <input type="checkbox">
           <span class="lbl padding-0">
             remember me
           </span>
