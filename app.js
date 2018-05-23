@@ -12,6 +12,7 @@ var partials = require('express-partials');
 var sassMiddleware = require('node-sass-middleware');
 var forceSsl = require('express-force-ssl');
 var clc = require('cli-color');
+var cors = require('cors');
 
 // Obtain secret from config file
 var config = require ('./config.js');
@@ -22,6 +23,7 @@ var api = require('./routes/api/index');
 var oauth2 = require('./routes/oauth2/oauth2');
 
 var app = express();
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
