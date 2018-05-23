@@ -37,6 +37,7 @@
     "oauth2-server": "git+https://github.com/ging/node-oauth2-server",
     "sequelize": "^4.22.0",
     "sequelize-cli": "^4.0.0",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "cors": "2.8.4"
   }
 }
