@@ -1,10 +1,10 @@
 <div id="content_body">
 	<div class="page-header">
 		<h2>
-			Applications
+			Приложения
 		</h2>
 	</div>
-	<h4> <%= session.user.username %>'s apps </h4>
+	<h4> Приложения пользователя <%= session.user.username %> </h4>
 	<div id="user_applications" class="myApplications-table">
 		<div class="panel panel-default tab-group">
 			<div id="header_panel_tabs" class="panel-heading">
@@ -13,13 +13,13 @@
 						<a href="/idm/applications/filtered_user?role=provider" data-toggle="tab" data-target="#panel_tabs_user_providing_tab" data-loaded="false">Providing</a>
 					</li>
 					<li class="">
-						<a href="/idm/applications/filtered_user?role=purchaser" data-toggle="tab" data-target="#panel_tabs_user_purchased_tab" data-loaded="false">Purchased</a>
+						<a href="/idm/applications/filtered_user?role=purchaser" data-toggle="tab" data-target="#panel_tabs_user_purchased_tab" data-loaded="false">Приобретенные</a>
 					</li>
 					<li class="">
-						<a href="/idm/applications/filtered_user?role=other" data-toggle="tab" data-target="#panel_tabs_user_authorized_tab" data-loaded="false">Authorized</a>
+						<a href="/idm/applications/filtered_user?role=other" data-toggle="tab" data-target="#panel_tabs_user_authorized_tab" data-loaded="false">Авторизованные</a>
 					</li>
 					<li class="" style="float: right;">
-						<a class="register_button" href="/idm/applications/new">Register</a>
+						<a class="register_button" href="/idm/applications/new">Зарегистрировать</a>
 					</li>
 				</ul>
 				<div id="spinner_panel_tabs" class="tab-spinner-inline" style="display: none;"><i class="fa fa-circle-o-notch fa-spin"></i>
@@ -29,7 +29,7 @@
 				<div id="panel_tabs_user_providing_tab" class="tab-pane active">
 					<div class=" datatable" id="providing_table" data-pagination-url="/filters/applications" data-application_role="provider" data-pagination-pages="">
 						<div class="list-group" id="providing_table_content">
-							<p class="alert alert-info empty" style="display: none;">You are not provider of any application.</p>	
+							<p class="alert alert-info empty" style="display: none;">Вы не являетесь поставщиком ни одного приложения.</p>
 						</div>
 						<div class="panel-footer">
 							<nav id="providing_table_pagination_container">
@@ -41,7 +41,7 @@
 				<div id="panel_tabs_user_purchased_tab" class="tab-pane">
 					<div class=" datatable" id="purchased_table" data-pagination-url="/filters/applications" data-application_role="purchaser" data-pagination-pages="">
 						<div class="list-group" id="purchased_table_content">
-							<p class="alert alert-info empty" style="display: none;">You are not purchaser of any application.</p>
+							<p class="alert alert-info empty" style="display: none;">Вы не приобрели ни одного приложения.</p>
 						</div>
 						<div class="panel-footer">
 							<nav id="purchased_table_pagination_container">
@@ -53,7 +53,7 @@
 				<div id="panel_tabs_user_authorized_tab" class="tab-pane">
 					<div class=" datatable" id="authorized_table" data-pagination-url="/filters/applications" data-application_role="other" data-pagination-pages="">
 						<div class="list-group" id="authorized_table_content">
-							<p class="alert alert-info empty" style="display: none;">You are not authorized in any application.</p>
+							<p class="alert alert-info empty" style="display: none;">Вы не авторизованы ни в одном приложении.</p>
 						</div>
 						<div class="panel-footer">
 							<nav id="authorized_table_pagination_container">
@@ -65,32 +65,32 @@
 			</div>
 		</div>
 	</div>
-	<h4> <%= session.user.username %>'s organizations' apps </h4>
+	<h4> Приложения организаций <%= session.user.username %> </h4>
 	<div id="organization_applications" class="myApplications-table">
 		<div class="panel panel-default tab-group">
 			<div id="header_panel_tabs" class="panel-heading">
 				<ul id="panel_tabs" class="nav nav-tabs ajax-tabs" data-sticky-tabs="sticky">
 					<li class="role active">
-						<a href="/idm/applications/filtered_organization?role=provider" data-toggle="tab" data-target="#panel_tabs_org_providing_tab" data-loaded="false">Providing</a>
+						<a href="/idm/applications/filtered_organization?role=provider" data-toggle="tab" data-target="#panel_tabs_org_providing_tab" data-loaded="false">Предоставляемые</a>
 					</li>
 					<li class="role">
-						<a href="/idm/applications/filtered_organization?role=purchaser" data-toggle="tab" data-target="#panel_tabs_org_purchased_tab" data-loaded="false">Purchased</a>
+						<a href="/idm/applications/filtered_organization?role=purchaser" data-toggle="tab" data-target="#panel_tabs_org_purchased_tab" data-loaded="false">Приобретенные</a>
 					</li>
 					<li class="role">
-						<a href="/idm/applications/filtered_organization?role=other" data-toggle="tab" data-target="#panel_tabs_org_authorized_tab" data-loaded="false">Authorized</a>
+						<a href="/idm/applications/filtered_organization?role=other" data-toggle="tab" data-target="#panel_tabs_org_authorized_tab" data-loaded="false">Авторизованные</a>
 					</li>
 					<li id="tab_register_app" class="" style="float: right;">
-						<a class="register_button" href="/idm/applications/new">Register</a>
+						<a class="register_button" href="/idm/applications/new">Зарегистрировать</a>
 					</li>
 					<li id="tab_select" class="form-group" style="float: right; margin-right: 10px; width: 200px;">
 						<div class="select-multiple form-group">
 				            <select name="grant_type[]" id="select_org" class="selectpicker" data-size="5" data-width="100%" data-dropup-auto="false" data-dropdown-align-right="true">
 				              	<% if (organizations.length > 0) { -%>
 								 	<% for (var i = 0; i < organizations.length; i++) { -%>
-					                	<option value="<%= organizations[i].Organization.id %>"><%= organizations[i].Organization.name %></option>  
-					              	<% } -%>  
+					                	<option value="<%= organizations[i].Organization.id %>"><%= organizations[i].Organization.name %></option>
+					              	<% } -%>
 							 	<% } else { -%>
-							 		<option disabled selected>No organizations</option>
+							 		<option disabled selected>Нет организаций</option>
 							 	<% } -%>
 				            </select>
 				        </div>
@@ -105,7 +105,7 @@
 						<div class="list-group" id="providing_table_content">
 						</div>
 						<div class="list-group">
-							<p class="alert alert-info empty" style="display: none;">You are not provider of any application.</p>	
+							<p class="alert alert-info empty" style="display: none;">Вы не являетесь поставщиком ни одного приложения.</p>
 						</div>
 						<div class="panel-footer">
 							<nav id="providing_table_pagination_container">
@@ -119,7 +119,7 @@
 						<div class="list-group" id="purchased_table_content">
 						</div>
 						<div class="list-group">
-							<p class="alert alert-info empty" style="display: none;">You are not purchaser of any application.</p>	
+							<p class="alert alert-info empty" style="display: none;">Вы не приобрели ни одного приложения.</p>
 						</div>
 						<div class="panel-footer">
 							<nav id="purchased_table_pagination_container">
@@ -133,7 +133,7 @@
 						<div class="list-group" id="authorized_table_content">
 						</div>
 						<div class="list-group">
-							<p class="alert alert-info empty" style="display: none;">You are not authorized in any application.</p>	
+							<p class="alert alert-info empty" style="display: none;">Вы не авторизованы ни в одном приложении.</p>
 						</div>
 						<div class="panel-footer">
 							<nav id="authorized_table_pagination_container">
